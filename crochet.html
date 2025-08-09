@@ -26,17 +26,30 @@
       color: #ffffff;
     }
 
-    .customise-banner {
-      background-color: #ffde59;
-      padding: 10px;
+    .customisable-banner {
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      background-color: #ffcc00;
+      color: black;
+      font-size: 0.85rem;
       font-weight: bold;
-      font-size: 1.2rem;
-      color: #4a2a6b;
-      border-radius: 0;
-      position: sticky;
-      top: 0;
-      z-index: 1001;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 4px 10px;
+      border-radius: 0 5px 5px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .semi-customisable-banner {
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      background-color: #ffcc00;
+      color: black;
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 0 5px 5px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     main {
@@ -178,7 +191,6 @@
 <body>
   <header>
     <h1>Crochet Plushies</h1>
-    <div class="customise-banner">🎨 Customise colour, size, and emotes! ✨</div>
   </header>
 
   <a class="back-link" href="index.html" aria-label="Back to home">← Back to home</a>
@@ -192,26 +204,31 @@
 
     <div class="product-grid">
       <div class="product-card">
+        <div class="customisable-banner">Customisable</div>
         <img src="img/crochet mooshroom.jpg" alt="Handmade Crochet Mooshroom Plushie" class="plushie-image" />
         <p class="price">$10 each or 3 for $25</p>
       </div>
 
       <div class="product-card">
+        <div class="semi-customisable-banner">Customisable colour!</div>
         <img src="img/airpods_pouch.png" alt="Crochet Airpods pouch bear" class="plushie-image" />
         <p class="price">$8 each</p>
       </div>
 
       <div class="product-card">
+        <div class="semi-customisable-banner">Customisable colour!</div>
         <img src="img/airpods_pouch2.png" alt="Keyring Crochet Airpods Pouch" class="plushie-image" />
         <p class="price">$8 each</p>
       </div>
 
       <div class="product-card">
+        <div class="semi-customisable-banner">Customisable colour!</div>
         <img src="img/knitted_pins.png" alt="Knitted Pins" class="plushie-image" />
         <p class="price">$3 each or 3 for $8</p>
       </div>
 
       <div class="product-card">
+        <div class="semi-customisable-banner">Customisable colour!</div>
         <img src="img/crochet_hairclip.png" alt="Crochet Hairclip" class="plushie-image" />
         <p class="price">$5 each</p>
       </div>
