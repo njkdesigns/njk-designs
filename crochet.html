@@ -17,12 +17,26 @@
       padding: 1.5rem;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.5rem;
       color: #ffffff;
+    }
+
+    .customise-banner {
+      background-color: #ffde59;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #4a2a6b;
+      border-radius: 0;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     main {
@@ -91,13 +105,6 @@
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .caption {
-      font-size: 1rem;
-      color: #666;
-      margin-top: 0.5rem;
-      font-style: italic;
     }
 
     .price {
@@ -171,6 +178,7 @@
 <body>
   <header>
     <h1>Crochet Plushies</h1>
+    <div class="customise-banner">🎨 Customise colour, size, and emotes! ✨</div>
   </header>
 
   <a class="back-link" href="index.html" aria-label="Back to home">← Back to home</a>
@@ -185,31 +193,26 @@
     <div class="product-grid">
       <div class="product-card">
         <img src="img/crochet mooshroom.jpg" alt="Handmade Crochet Mooshroom Plushie" class="plushie-image" />
-        <p class="caption">Handmade Crochet Mooshroom — customise colour, size, and emotes!</p>
         <p class="price">$10 each or 3 for $25</p>
       </div>
 
       <div class="product-card">
         <img src="img/airpods_pouch.png" alt="Crochet Airpods pouch bear" class="plushie-image" />
-        <p class="caption">Crochet Bear AirPods Pouch — cute, protective, and portable.</p>
         <p class="price">$8 each</p>
       </div>
 
       <div class="product-card">
         <img src="img/airpods_pouch2.png" alt="Keyring Crochet Airpods Pouch" class="plushie-image" />
-        <p class="caption">Keyring Crochet AirPods Pouch — take your music anywhere in style.</p>
         <p class="price">$8 each</p>
       </div>
 
       <div class="product-card">
         <img src="img/knitted_pins.png" alt="Knitted Pins" class="plushie-image" />
-        <p class="caption">Knitted Pins — adorable accessories for bags, jackets, and hats.</p>
         <p class="price">$3 each or 3 for $8</p>
       </div>
 
       <div class="product-card">
         <img src="img/crochet_hairclip.png" alt="Crochet Hairclip" class="plushie-image" />
-        <p class="caption">Crochet Hairclip — handmade, lightweight, and full of charm.</p>
         <p class="price">$5 each</p>
       </div>
     </div>
