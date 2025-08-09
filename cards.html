@@ -25,6 +25,16 @@
       color: #fff;
     }
 
+    .deal-banner {
+      background-color: #ff7b7b;
+      color: white;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
     main {
       padding: 2rem;
       max-width: 1000px;
@@ -92,6 +102,13 @@
       font-style: italic;
     }
 
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #4a2a6b;
+      margin-top: 0.3rem;
+    }
+
     .preorder-btn {
       position: fixed;
       bottom: 20px;
@@ -119,7 +136,7 @@
       50% { transform: scale(1.07); }
       100% { transform: scale(1); }
     }
-  
+
     /* Email request section */
     .email-section {
       margin-top: 3rem;
@@ -158,6 +175,10 @@
     <h1>Card Collection</h1>
   </header>
 
+  <div class="deal-banner">
+    🎉 Market Day Special — 3 Cards for $1 🎉
+  </div>
+
   <a class="back-link" href="index.html">← Back to home</a>
 
   <main>
@@ -166,27 +187,32 @@
     <div class="product-grid">
       <div class="product-card">
         <img src="img/ENHYPEN_cards.png" alt="ENHYPEN Cards" class="product-image" />
-        <p class="caption">ENHYPEN Card Set</p>
+        <p class="caption">ENHYPEN Card</p>
+        <p class="price">3 for $1</p>
       </div>
       <div class="product-card">
         <img src="img/skz_cards.png" alt="Stray Kids Cards" class="product-image" />
-        <p class="caption">Stray Kids Card Set</p>
+        <p class="caption">Stray Kids Card</p>
+        <p class="price">3 for $1</p>
       </div>
       <div class="product-card">
         <img src="img/haikyuu_cards.png" alt="Haikyuu Cards" class="product-image" />
-        <p class="caption">Haikyuu Card Set</p>
+        <p class="caption">Haikyuu Card</p>
+        <p class="price">3 for $1</p>
       </div>
       <div class="product-card">
         <img src="img/bluelock_cards.png" alt="Blue Lock Cards" class="product-image" />
-        <p class="caption">Blue Lock Card Set</p>
+        <p class="caption">Blue Lock Card</p>
+        <p class="price">3 for $1</p>
       </div>
       <div class="product-card">
         <img src="img/deathnote_cards.png" alt="Death Note Cards" class="product-image" />
-        <p class="caption">Death Note Card Set</p>
+        <p class="caption">Death Note Card</p>
+        <p class="price">3 for $1</p>
       </div>
     </div>
 
-<div class="email-section">
+    <div class="email-section">
       <p>Want another anime/video game merch?<br>
       Send us an email: <strong>designsnjk@gmail.com</strong></p>
       <input type="text" id="requestInput" placeholder="Type your request here..." />
