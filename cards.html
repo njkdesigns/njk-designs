@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Collection - NJK Designs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #a46ae5;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #4a2a6b;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4a2a6b;
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .caption {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    .preorder-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff7b7b;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      animation: pulse 2s infinite;
+    }
+
+    .preorder-btn:hover {
+      background-color: #e85c5c;
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+      100% { transform: scale(1); }
+    }
+  
+    /* Email request section */
+    .email-section {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .email-section input {
+      width: 80%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .email-section button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #a46ae5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .email-section button:hover {
+      background-color: #8c54c8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Card Collection</h1>
+  </header>
+
+  <a class="back-link" href="index.html">← Back to home</a>
+
+  <main>
+    <h2>Our Card Collections</h2>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="img/ENHYPEN_cards.png" alt="ENHYPEN Cards" class="product-image" />
+        <p class="caption">ENHYPEN Card Set</p>
+      </div>
+      <div class="product-card">
+        <img src="img/skz_cards.png" alt="Stray Kids Cards" class="product-image" />
+        <p class="caption">Stray Kids Card Set</p>
+      </div>
+      <div class="product-card">
+        <img src="img/haikyuu_cards.png" alt="Haikyuu Cards" class="product-image" />
+        <p class="caption">Haikyuu Card Set</p>
+      </div>
+      <div class="product-card">
+        <img src="img/bluelock_cards.png" alt="Blue Lock Cards" class="product-image" />
+        <p class="caption">Blue Lock Card Set</p>
+      </div>
+      <div class="product-card">
+        <img src="img/deathnote_cards.png" alt="Death Note Cards" class="product-image" />
+        <p class="caption">Death Note Card Set</p>
+      </div>
+    </div>
+
+<div class="email-section">
+      <p>Want another anime/video game merch?<br>
+      Send us an email: <strong>designsnjk@gmail.com</strong></p>
+      <input type="text" id="requestInput" placeholder="Type your request here..." />
+      <br>
+      <button onclick="sendEmail()">Send Email</button>
+      <p style="font-size:0.9rem; color:#555; margin-top:10px;">
+        We will get back to you within 2 business days.
+      </p>
+    </div>
+  </main>
+
+  <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
+    Pre-Order Now
+  </a>
+
+  <script>
+    function sendEmail() {
+      const request = document.getElementById('requestInput').value.trim();
+      if (!request) {
+        alert("Please enter your request before sending.");
+        return;
+      }
+      const subject = encodeURIComponent("Merch Request");
+      const body = encodeURIComponent(request);
+      const email = "designsnjk@gmail.com";
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+      window.open(gmailUrl, "_blank");
+    }
+  </script>
+</body>
+</html>

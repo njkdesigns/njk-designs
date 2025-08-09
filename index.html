@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NJK Designs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #aad8f7, #de9cfe);
+      color: #333;
+    }
+
+    header {
+      background-color: #c684e5; /* Slightly darker lilac background */
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      /* Change font color to white for contrast */
+      color: #ffffff; 
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #f0f0f0; /* Light text for better contrast */
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      max-width: 280px;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+      text-decoration: none; /* Remove underline for links */
+      color: inherit; /* Keep default text color inside links */
+      border: 2px solid transparent;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      border-color: #de9cfe; /* Lilac border on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #a46ae5; /* Consistent accent */
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    /* Updated button style for better visibility */
+    .preorder-button {
+      display: block;
+      margin: 2rem auto;
+      background-color: #a46ae5; /* Use a vibrant purple for contrast */
+      color: #ffffff; /* White text for legibility */
+      border: none; /* Remove border for a cleaner look */
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .preorder-button:hover {
+      background-color: #8a50d9; /* Slightly darker purple on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .preorder-button {
+        width: 90%;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .category-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NJK Designs</h1>
+    <div class="tagline">Cute handmade crochet, jewelry, and more!</div>
+  </header>
+
+  <main>
+    <div class="category-container">
+      <a href="crochet.html" class="card" aria-label="Crochet Amiguri" role="link">
+        <img src="img/knitted_pins.png" alt="Crochet Amiguri" />
+        <h3>Crochet Amiguri</h3>
+        <p>Soft, handmade amiguri in adorable designs. Preorder now!</p>
+      </a>
+
+      <a href="jewelry.html" class="card" aria-label="Custom Bracelets" role="link">
+        <img src="img/sample_bracelet1.png" alt="Custom Bracelets" />
+        <h3>Custom Jewelry</h3>
+        <p>Spell your name, favorite word, or theme with our beads!</p>
+      </a>
+
+      <a href="cards.html" class="card" aria-label="Card Collection" role="link">
+        <img src="img/ENHYPEN_cards.png" alt="EN- cards" />
+        <h3>Card Collection</h3>
+        <p>Take a look at out card collections, which ranges from anime to kpop!</p>
+      </a>
+
+      <a href="stickers.html" class="card" aria-label="Sticker Assortment" role="link">
+        <img src="img/lad_stickers.png" alt="LAD stickers" />
+        <h3>Sticker Assortment</h3>
+        <p>Designed to stick with you – literally. Water resistant and sticks on all surfaces!</p>
+      </a>
+    </div>
+
+    <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" rel="noopener noreferrer">
+      <button class="preorder-button">Preorder Now + Get Perks!</button>
+    </a>
+  </main>
+
+  <footer>
+    &copy; 2025 NJK Designs - Email us: <a href="mailto:designsnjk@gmail.com">designsnjk@gmail.com</a>
+  </footer>
+</body>
+</html>
