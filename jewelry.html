@@ -31,7 +31,6 @@
       margin: auto;
     }
 
-    /* Fixed Back to Home link */
     .back-link {
       position: fixed;
       top: 20px;
@@ -54,15 +53,14 @@
     h2 {
       text-align: center;
       color: #4a2a6b;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
     }
 
-    .content {
-      margin-top: 2rem;
+    .custom-note {
       text-align: center;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      color: #555;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 2rem;
     }
 
     .product-grid {
@@ -94,11 +92,11 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .caption {
-      font-size: 1rem;
-      color: #666;
-      margin-top: 0.5rem;
-      font-style: italic;
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #a46ae5;
+      margin-top: 0.7rem;
     }
 
     .preorder-btn {
@@ -130,7 +128,6 @@
       100% { transform: scale(1); }
     }
 
-        /* Email request section */
     .email-section {
       margin-top: 3rem;
       padding: 1.5rem;
@@ -168,35 +165,31 @@
     <h1>Custom Jewelry</h1>
   </header>
 
-  <!-- Fixed Back to Home -->
   <a class="back-link" href="index.html" aria-label="Back to home">← Back to home</a>
 
   <main>
     <h2>Our Custom Jewelry</h2>
-
-    <div class="content">
-      <p>Discover our beautifully handcrafted custom jewelry, perfect for personalized gifts or everyday wear. We use high-quality materials and offer a variety of styles to match your personality and preferences.</p>
-    </div>
+    <p class="custom-note">All pieces are fully customizable — choose your colors, materials, and charms!</p>
 
     <div class="product-grid">
       <div class="product-card">
         <img src="img/sample_bracelet1.png" alt="Custom Beaded Bracelet" class="jewelry-image" />
-        <p class="caption">Custom Beaded Bracelet — choose your beads, charms, and colours.</p>
+        <p class="price">$12</p>
       </div>
 
       <div class="product-card">
         <img src="img/sample_earrings1.png" alt="Handmade Earrings" class="jewelry-image" />
-        <p class="caption">Handmade Earrings — elegant designs for every occasion.</p>
+        <p class="price">$15</p>
       </div>
 
       <div class="product-card">
         <img src="img/crochet_hairclip.png" alt="Crochet and Bead Hairclip" class="jewelry-image" />
-        <p class="caption">Crochet & Bead Hairclip — a unique blend of yarn and sparkle.</p>
+        <p class="price">$8</p>
       </div>
 
       <div class="product-card">
         <img src="img/bow_pins.png" alt="Decorative Bow Pins" class="jewelry-image" />
-        <p class="caption">Decorative Bow Pins — add charm to bags, hats, and clothes.</p>
+        <p class="price">$5</p>
       </div>
     </div>
 
@@ -212,12 +205,11 @@
     </div>
   </main>
 
-  <!-- Fixed Pre-order button -->
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
     Pre-Order Now
   </a>
     
-    <script>
+  <script>
     function sendEmail() {
       const request = document.getElementById('requestInput').value.trim();
       if (!request) {
