@@ -31,6 +31,7 @@
       margin: auto;
     }
 
+    /* Fixed Back to Home link */
     .back-link {
       position: fixed;
       top: 20px;
@@ -53,14 +54,15 @@
     h2 {
       text-align: center;
       color: #4a2a6b;
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
     }
 
-    .custom-note {
+    .content {
+      margin-top: 2rem;
       text-align: center;
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #555;
     }
 
     .product-grid {
@@ -77,6 +79,7 @@
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
     }
 
     .product-card:hover {
@@ -92,42 +95,34 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
+    .caption {
+      font-size: 1rem;
+      color: #333;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
     .price {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      color: #ff7b7b;
       font-weight: bold;
-      color: #a46ae5;
-      margin-top: 0.7rem;
+      margin-top: 0.3rem;
     }
 
-    .preorder-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #ff7b7b;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 50px;
-      font-size: 1.1rem;
+    .customizable-banner {
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      background-color: #ffcc00;
+      color: black;
+      font-size: 0.85rem;
       font-weight: bold;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-      display: inline-block;
-      animation: pulse 2s infinite;
+      padding: 4px 10px;
+      border-radius: 0 5px 5px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
-    .preorder-btn:hover {
-      background-color: #e85c5c;
-      transform: scale(1.05);
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.07); }
-      100% { transform: scale(1); }
-    }
-
+    /* Email request section */
     .email-section {
       margin-top: 3rem;
       padding: 1.5rem;
@@ -158,6 +153,36 @@
     .email-section button:hover {
       background-color: #8c54c8;
     }
+
+    /* Fixed Pre-order button */
+    .preorder-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff7b7b;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    .preorder-btn:hover {
+      background-color: #e85c5c;
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
 <body>
@@ -165,31 +190,43 @@
     <h1>Custom Jewelry</h1>
   </header>
 
+  <!-- Fixed Back to Home -->
   <a class="back-link" href="index.html" aria-label="Back to home">← Back to home</a>
 
   <main>
     <h2>Our Custom Jewelry</h2>
-    <p class="custom-note">All pieces are fully customizable — choose your colors, materials, and charms!</p>
+
+    <div class="content">
+      <p>Discover our beautifully handcrafted custom jewelry. All items are **customizable** to your style!</p>
+    </div>
 
     <div class="product-grid">
       <div class="product-card">
+        <div class="customizable-banner">Customizable!</div>
         <img src="img/sample_bracelet1.png" alt="Custom Beaded Bracelet" class="jewelry-image" />
-        <p class="price">$12</p>
+        <p class="caption">Custom Beaded Bracelet</p>
+        <p class="price">3 for $1</p>
       </div>
 
       <div class="product-card">
+        <div class="customizable-banner">Customizable!</div>
         <img src="img/sample_earrings1.png" alt="Handmade Earrings" class="jewelry-image" />
-        <p class="price">$15</p>
+        <p class="caption">Handmade Earrings</p>
+        <p class="price">3 for $1</p>
       </div>
 
       <div class="product-card">
+        <div class="customizable-banner">Customizable!</div>
         <img src="img/crochet_hairclip.png" alt="Crochet and Bead Hairclip" class="jewelry-image" />
-        <p class="price">$8</p>
+        <p class="caption">Crochet & Bead Hairclip</p>
+        <p class="price">3 for $1</p>
       </div>
 
       <div class="product-card">
+        <div class="customizable-banner">Customizable!</div>
         <img src="img/bow_pins.png" alt="Decorative Bow Pins" class="jewelry-image" />
-        <p class="price">$5</p>
+        <p class="caption">Decorative Bow Pins</p>
+        <p class="price">3 for $1</p>
       </div>
     </div>
 
@@ -205,11 +242,12 @@
     </div>
   </main>
 
+  <!-- Fixed Pre-order button -->
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
     Pre-Order Now
   </a>
     
-  <script>
+    <script>
     function sendEmail() {
       const request = document.getElementById('requestInput').value.trim();
       if (!request) {
