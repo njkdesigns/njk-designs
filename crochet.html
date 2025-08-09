@@ -31,7 +31,6 @@
       margin: auto;
     }
 
-    /* Fixed Back to Home link */
     .back-link {
       position: fixed;
       top: 20px;
@@ -101,6 +100,13 @@
       font-style: italic;
     }
 
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #a46ae5;
+      margin-top: 0.5rem;
+    }
+
     .preorder-btn {
       position: fixed;
       bottom: 20px;
@@ -129,7 +135,7 @@
       50% { transform: scale(1.07); }
       100% { transform: scale(1); }
     }
-        /* Email request section */
+
     .email-section {
       margin-top: 3rem;
       padding: 1.5rem;
@@ -167,7 +173,6 @@
     <h1>Crochet Plushies</h1>
   </header>
 
-  <!-- Fixed Back to Home -->
   <a class="back-link" href="index.html" aria-label="Back to home">← Back to home</a>
 
   <main>
@@ -181,26 +186,31 @@
       <div class="product-card">
         <img src="img/crochet mooshroom.jpg" alt="Handmade Crochet Mooshroom Plushie" class="plushie-image" />
         <p class="caption">Handmade Crochet Mooshroom — customise colour, size, and emotes!</p>
+        <p class="price">$10 each or 3 for $25</p>
       </div>
 
       <div class="product-card">
         <img src="img/airpods_pouch.png" alt="Crochet Airpods pouch bear" class="plushie-image" />
         <p class="caption">Crochet Bear AirPods Pouch — cute, protective, and portable.</p>
+        <p class="price">$8 each</p>
       </div>
 
       <div class="product-card">
         <img src="img/airpods_pouch2.png" alt="Keyring Crochet Airpods Pouch" class="plushie-image" />
         <p class="caption">Keyring Crochet AirPods Pouch — take your music anywhere in style.</p>
+        <p class="price">$8 each</p>
       </div>
 
       <div class="product-card">
         <img src="img/knitted_pins.png" alt="Knitted Pins" class="plushie-image" />
         <p class="caption">Knitted Pins — adorable accessories for bags, jackets, and hats.</p>
+        <p class="price">$3 each or 3 for $8</p>
       </div>
 
       <div class="product-card">
         <img src="img/crochet_hairclip.png" alt="Crochet Hairclip" class="plushie-image" />
         <p class="caption">Crochet Hairclip — handmade, lightweight, and full of charm.</p>
+        <p class="price">$5 each</p>
       </div>
     </div>
 
@@ -216,12 +226,11 @@
     </div>
   </main>
 
-  <!-- Fixed Pre-order button -->
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
     Pre-Order Now
   </a>
 
-    <script>
+  <script>
     function sendEmail() {
       const request = document.getElementById('requestInput').value.trim();
       if (!request) {
