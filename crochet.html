@@ -26,12 +26,10 @@
       color: #ffffff;
     }
 
-    .customisable-banner {
+    .banner {
       position: absolute;
       top: 10px;
       left: -5px;
-      background-color: #ffcc00;
-      color: black;
       font-size: 0.85rem;
       font-weight: bold;
       padding: 4px 10px;
@@ -39,17 +37,14 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
-    .semi-customisable-banner {
-      position: absolute;
-      top: 10px;
-      left: -5px;
+    .customisable {
+      background-color: #ffcc00;
+      color: black;
+    }
+
+    .semi-customisable {
       background-color: #d400ff;
       color: white;
-      font-size: 0.85rem;
-      font-weight: bold;
-      padding: 4px 10px;
-      border-radius: 0 5px 5px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     main {
@@ -101,11 +96,14 @@
     .product-card {
       position: relative;
       background: white;
-      padding: 1rem;
       border-radius: 15px;
+      overflow: hidden;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
 
     .product-card:hover {
@@ -113,19 +111,23 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .plushie-image {
+    .plushie-images {
+      display: flex;
+      flex-direction: row;
       width: 100%;
-      max-height: 250px;
+    }
+
+    .plushie-images img {
+      width: 50%;
+      height: 250px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .price {
       font-size: 1.1rem;
       font-weight: bold;
       color: #a46ae5;
-      margin-top: 0.5rem;
+      padding: 0.8rem 0 1rem 0;
     }
 
     .preorder-btn {
@@ -204,35 +206,32 @@
     </div>
 
     <div class="product-grid">
-      <div class="product-card">
-        <div class="customisable-banner">Customisable</div>
-        <img src="img/crochet mooshroom.jpg" alt="Handmade Crochet Mooshroom Plushie" class="plushie-image" />
+      <a href="plushie-mooshroom.html" class="product-card">
+        <div class="banner customisable">Customisable</div>
+        <img src="img/crochet mooshroom.jpg" alt="Handmade Crochet Mooshroom Plushie" style="width:100%;height:250px;object-fit:cover;" />
         <p class="price">$10 each or 3 for $25</p>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="semi-customisable-banner">Customisable colour!</div>
-        <img src="img/airpods_pouch.png" alt="Crochet Airpods pouch bear" class="plushie-image" />
+      <a href="plushie-airpods.html" class="product-card">
+        <div class="banner semi-customisable">Customisable colour!</div>
+        <div class="plushie-images">
+          <img src="img/airpods_pouch.png" alt="Crochet Airpods pouch bear" />
+          <img src="img/airpods_pouch2.png" alt="Keyring Crochet Airpods Pouch" />
+        </div>
         <p class="price">$8 each</p>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="semi-customisable-banner">Customisable colour!</div>
-        <img src="img/airpods_pouch2.png" alt="Keyring Crochet Airpods Pouch" class="plushie-image" />
-        <p class="price">$8 each</p>
-      </div>
-
-      <div class="product-card">
-        <div class="semi-customisable-banner">Customisable colour!</div>
-        <img src="img/knitted_pins.png" alt="Knitted Pins" class="plushie-image" />
+      <a href="plushie-knitted-pins.html" class="product-card">
+        <div class="banner semi-customisable">Customisable colour!</div>
+        <img src="img/knitted_pins.png" alt="Knitted Pins" style="width:100%;height:250px;object-fit:cover;" />
         <p class="price">$3 each or 3 for $8</p>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="semi-customisable-banner">Customisable colour!</div>
-        <img src="img/crochet_hairclip.png" alt="Crochet Hairclip" class="plushie-image" />
+      <a href="plushie-hairclip.html" class="product-card">
+        <div class="banner semi-customisable">Customisable colour!</div>
+        <img src="img/crochet_hairclip.png" alt="Crochet Hairclip" style="width:100%;height:250px;object-fit:cover;" />
         <p class="price">$5 each</p>
-      </div>
+      </a>
     </div>
 
     <div class="email-section">

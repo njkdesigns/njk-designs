@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crochet Hairclips - NJK Designs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #a46ae5;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #ffffff;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #4a2a6b;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4a2a6b;
+      margin-bottom: 2rem;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 12px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 0 3px 3px 0;
+      background-color: rgba(0,0,0,0.5);
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .price {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #a46ae5;
+      margin-top: 1rem;
+    }
+
+    .preorder-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff7b7b;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      animation: pulse 2s infinite;
+    }
+
+    .preorder-btn:hover {
+      background-color: #e85c5c;
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Crochet Hairclips</h1>
+  </header>
+
+  <a class="back-link" href="crochet-plushies.html" aria-label="Back to Crochet Plushies">← Back</a>
+
+  <main>
+    <h2>Our Crochet Hairclips Collection</h2>
+
+    <div class="slider">
+      <img class="slides" src="img/hairclip-placeholder1.png" alt="Crochet Hairclip Design 1">
+      <img class="slides" src="img/hairclip-placeholder2.png" alt="Crochet Hairclip Design 2">
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <p class="price">$3 each or 3 for $8</p>
+  </main>
+
+  <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
+    Pre-Order Now
+  </a>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
