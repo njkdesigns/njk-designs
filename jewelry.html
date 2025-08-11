@@ -17,6 +17,7 @@
       padding: 1.5rem;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     header h1 {
@@ -25,13 +26,33 @@
       color: #ffffff;
     }
 
+    .banner {
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 0 5px 5px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .customisable {
+      background-color: #ffcc00;
+      color: black;
+    }
+
+    .semi-customisable {
+      background-color: #d400ff;
+      color: white;
+    }
+
     main {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
     }
 
-    /* Fixed Back to Home link */
     .back-link {
       position: fixed;
       top: 20px;
@@ -73,13 +94,16 @@
     }
 
     .product-card {
+      position: relative;
       background: white;
-      padding: 1rem;
       border-radius: 15px;
+      overflow: hidden;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
 
     .product-card:hover {
@@ -87,51 +111,55 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .jewelry-image {
+    .product-card img {
       width: 100%;
-      max-height: 250px;
+      height: 250px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .caption {
-      font-size: 1rem;
+    .product-title {
+      font-weight: bold;
+      font-size: 1.2rem;
       color: #333;
-      margin-top: 0.5rem;
+      padding-top: 0.8rem;
     }
 
     .price {
-      font-size: 1rem;
-      color: #ff7b7b;
-      margin-top: 0.3rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #a46ae5;
+      padding: 0.5rem 0 1rem 0;
     }
 
-    .customisable-banner {
-      position: absolute;
-      top: 10px;
-      left: -5px;
-      background-color: #ffcc00;
-      color: black;
-      font-size: 0.85rem;
-      padding: 4px 10px;
-      border-radius: 0 5px 5px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    .preorder-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff7b7b;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: inline-block;
+      animation: pulse 2s infinite;
     }
 
-    .semi-customisable-banner {
-      position: absolute;
-      top: 10px;
-      left: -5px;
-      background-color: #d400ff;
-      color: black;
-      font-size: 0.85rem;
-      padding: 4px 10px;
-      border-radius: 0 5px 5px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    .preorder-btn:hover {
+      background-color: #e85c5c;
+      transform: scale(1.05);
     }
 
-    /* Email request section */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+      100% { transform: scale(1); }
+    }
+
     .email-section {
       margin-top: 3rem;
       padding: 1.5rem;
@@ -162,36 +190,6 @@
     .email-section button:hover {
       background-color: #8c54c8;
     }
-
-    /* Fixed Pre-order button */
-    .preorder-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #ff7b7b;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-      display: inline-block;
-      animation: pulse 2s infinite;
-    }
-
-    .preorder-btn:hover {
-      background-color: #e85c5c;
-      transform: scale(1.05);
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.07); }
-      100% { transform: scale(1); }
-    }
   </style>
 </head>
 <body>
@@ -199,75 +197,39 @@
     <h1>Custom Jewelry</h1>
   </header>
 
-  <!-- Fixed Back to Home -->
   <a class="back-link" href="index.html" aria-label="Back to home">← Back to home</a>
 
   <main>
     <h2>Our Custom Jewelry</h2>
 
     <div class="content">
-      <b>Discover our beautifully handcrafted custom jewelry. All items are <b>customizable</b> to your style!</p>
+      <p>Discover our beautifully handcrafted jewelry ~ fully customisable to match your unique style!</p>
     </div>
 
     <div class="product-grid">
-      <div class="product-card">
-        <div class="customisable-banner">Customisable!</div>
-        <img src="img/sample_bracelet1.png" alt="Custom Beaded Bracelet" class="jewelry-image" />
-        <p class="caption">Custom Beaded Bracelet</p>
-        <p class="price">3 for $1</p>
-      </div>
+      <a href="jewelry-bracelet.html" class="product-card">
+        <div class="banner customisable">Customisable!</div>
+        <img src="img/sample_bracelet1.png" alt="Custom Beaded Bracelet" />
+        <div class="product-title">Custom Beaded Bracelet</div>
+        <p class="price">$5</p>
+      </a>
 
-      <div class="product-card">
-        <div class="customisable-banner">Customisable!</div>
-        <img src="img/sample_earrings1.png" alt="Handmade Earrings" class="jewelry-image" />
-        <p class="caption">Handmade Earrings</p>
-        <p class="price">3 for $1</p>
-      </div>
+      <a href="jewelry-earrings.html" class="product-card">
+        <div class="banner customisable">Customisable!</div>
+        <img src="img/sample_earrings1.png" alt="Handmade Earrings" />
+        <div class="product-title">Handmade Earrings</div>
+        <p class="price">$5</p>
+      </a>
 
-      <div class="product-card">
-        <div class="semi-customisable-banner">Customisable colour!</div>
-        <img src="img/crochet_hairclip.png" alt="Crochet and Bead Hairclip" class="jewelry-image" />
-        <p class="caption">Crochet & Bead Hairclip</p>
-        <p class="price">3 for $1</p>
-      </div>
-
-      <div class="product-card">
-        <img src="img/bow_pins.png" alt="Decorative Bow Pins" class="jewelry-image" />
-        <p class="caption">Decorative Bow Pins</p>
-        <p class="price">3 for $1</p>
-      </div>
+      <a href="plushie-hair.html" class="product-card">
+        <div class="banner semi-customisable">Customisable colours!</div>
+        <img src="img/crochet_hairclip.png" alt="Crochet & Bead Hairclip" />
+        <div class="product-title">Crochet & Bead Hairclip</div>
+        <p class="price">$4</p>
+      </a>
     </div>
 
     <div class="email-section">
-      <p>Want another type of merch?<br>
+      <p>Want another type of design?<br>
       Send us an email: <strong>designsnjk@gmail.com</strong></p>
       <input type="text" id="requestInput" placeholder="Type your request here..." />
-      <br>
-      <button onclick="sendEmail()">Send Email</button>
-      <p style="font-size:0.9rem; color:#555; margin-top:10px;">
-        We will get back to you within 2 business days.
-      </p>
-    </div>
-  </main>
-
-  <!-- Fixed Pre-order button -->
-  <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
-    Pre-Order Now
-  </a>
-    
-    <script>
-    function sendEmail() {
-      const request = document.getElementById('requestInput').value.trim();
-      if (!request) {
-        alert("Please enter your request before sending.");
-        return;
-      }
-      const subject = encodeURIComponent("Merch Request");
-      const body = encodeURIComponent(request);
-      const email = "designsnjk@gmail.com";
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
-      window.open(gmailUrl, "_blank");
-    }
-  </script>
-</body>
-</html>

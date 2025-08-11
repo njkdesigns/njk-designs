@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crochet Trinkets - NJK Designs</title>
+  <title>Bracelet - NJK Designs</title>
   <style>
     body {
       margin: 0;
@@ -160,81 +160,84 @@
       50% { transform: scale(1.07); }
       100% { transform: scale(1); }
     }
+
     .email-section {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-.email-section input {
-  width: 80%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
+    .email-section input {
+      width: 80%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-.email-section button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #a46ae5;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    .email-section button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #a46ae5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.email-section button:hover {
-  background-color: #8c54c8;
-}
+    .email-section button:hover {
+      background-color: #8c54c8;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Crochet Trinkets</h1>
-    <div class="price-top">$3 each or 3 for $8</div>
+    <h1>Bracelets</h1>
+    <div class="price-top">$5 each</div>
   </header>
 
-  <a class="back-link" href="crochet-plushies.html">← Back to Crochet</a>
+  <a class="back-link" href="jewelry.html">← Back to Jewelry</a>
 
   <main>
     <div class="image-gallery">
-      <a href="#img1"><img src="img/knitted_bow.jpg" alt="Crochet knitted bow" /></a>
-      <a href="#img2"><img src="img/knitted_flower.jpg" alt="Crochet knitted flower" /></a>
+      <a href="#img1"><img src="img/sample_bracelet1.png" alt="Bracelet sample1" /></a>
+      <a href="#img2"><img src="img/sample_earrings.png" alt="Bracelet sample2" /></a>
     </div>
 
     <div class="description">
-      <p>Our adorable crochet trinkets make the perfect little accessory! We can turn them into hairclips, brooches, or other custom designs. Want something unique? We can custom make any style or theme you’d like.</p>
+      <p>Handmade with care, this bracelet is a perfect blend of style and craftsmanship.  
+         Available in various designs to match your unique taste.</p>
     </div>
   </main>
 
   <!-- Popup Images -->
   <div id="img1" class="popup">
     <a href="#" class="popup-close">&times;</a>
-    <img src="img/knitted_bow.jpg" alt="Crochet knitted bow large" />
+    <img src="img/sample_bracelet1.png" alt="Bracelet sample1" />
   </div>
 
   <div id="img2" class="popup">
     <a href="#" class="popup-close">&times;</a>
-    <img src="img/knitted_flower.jpg" alt="Crochet knitted flower large" />
+    <img src="img/sample_earrings.png" alt="Bracelet sample2" />
   </div>
 
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
     Pre-Order Now
   </a>
+
   <div class="email-section">
-  <p>Want another type of design?<br>
-  Send us an email: <strong>designsnjk@gmail.com</strong></p>
-  <input type="text" id="requestInput" placeholder="Type your request here..." />
-  <br>
-  <button onclick="sendEmail()">Send Email</button>
-  <p style="font-size:0.9rem; color:#555; margin-top:10px;">
-    We will get back to you within 2 business days.
-  </p>
-</div>
+    <p>Want a different design?<br>
+    Send us an email: <strong>designsnjk@gmail.com</strong></p>
+    <input type="text" id="requestInput" placeholder="Type your request here..." />
+    <br>
+    <button onclick="sendEmail()">Send Email</button>
+    <p style="font-size:0.9rem; color:#555; margin-top:10px;">
+      We will get back to you within 2 business days.
+    </p>
+  </div>
 
 <script>
   function sendEmail() {
@@ -243,13 +246,12 @@
       alert("Please enter your request before sending.");
       return;
     }
-    const subject = encodeURIComponent("Merch Request");
+    const subject = encodeURIComponent("Jewelry Request");
     const body = encodeURIComponent(request);
     const email = "designsnjk@gmail.com";
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
     window.open(gmailUrl, "_blank");
   }
 </script>
-
 </body>
 </html>

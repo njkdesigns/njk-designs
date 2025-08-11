@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sticker Assortment - NJK Designs</title>
+  <title>Sticker Collection - NJK Designs</title>
   <style>
     body {
       margin: 0;
@@ -16,7 +16,7 @@
       background-color: #a46ae5;
       padding: 1.5rem;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     header h1 {
@@ -31,7 +31,6 @@
       margin: auto;
     }
 
-    /* Fixed Back to Home */
     .back-link {
       position: fixed;
       top: 20px;
@@ -57,28 +56,23 @@
       margin-bottom: 2rem;
     }
 
-    .content {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      color: #555;
-    }
-
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
     }
 
     .product-card {
       background: white;
-      padding: 1rem;
       border-radius: 15px;
+      overflow: hidden;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
     }
 
     .product-card:hover {
@@ -86,22 +80,26 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .sticker-image {
+    .product-card img {
       width: 100%;
-      max-height: 200px;
+      height: 250px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .caption {
-      font-size: 0.95rem;
-      color: #666;
-      margin-top: 0.5rem;
-      font-style: italic;
+    .product-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #333;
+      padding-top: 0.8rem;
     }
 
-    /* Fixed Preorder button */
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #a46ae5;
+      padding: 0.5rem 0 1rem 0;
+    }
+
     .preorder-btn {
       position: fixed;
       bottom: 20px;
@@ -130,7 +128,6 @@
       100% { transform: scale(1); }
     }
 
-        /* Email request section */
     .email-section {
       margin-top: 3rem;
       padding: 1.5rem;
@@ -165,44 +162,43 @@
 </head>
 <body>
   <header>
-    <h1>Sticker Assortment</h1>
+    <h1>Sticker Collection</h1>
   </header>
 
-  <!-- Fixed Back to Home -->
-  <a class="back-link" href="index.html" aria-label="Back to home">← Back to home</a>
+  <a class="back-link" href="index.html">← Back to home</a>
 
   <main>
-    <h2>Our Sticker Assortment</h2>
-
-    <div class="content">
-      <p>Fun and colorful stickers inspired by your favorite games, anime, and more!  
-         3 stickers for $1 — mix and match your favorites.</p>
-    </div>
+    <h2>Our Collections</h2>
 
     <div class="product-grid">
-      <div class="product-card">
-        <img src="img/lad_stickers.png" alt="Love and Deep Space Stickers" class="sticker-image" />
-        <p class="caption">Love and Deep Space themed designs</p>
-      </div>
+  <a href="stickers-videogames.html" class="product-card">
+    <img src="img/genshin_stickers.png" alt="Video Game Stickers" />
+    <div class="product-title">Video Games</div>
+    <p class="price">3 for $1</p>
+  </a>
 
-      <div class="product-card">
-        <img src="img/honkai_stickers.png" alt="Honkai Star Rail Stickers" class="sticker-image" />
-        <p class="caption">Honkai: Star Rail inspired set</p>
-      </div>
+  <a href="stickers-kpop.html" class="product-card">
+    <img src="img/skz_stickers.webp" alt="KPOP Group Stickers" />
+    <div class="product-title">KPOP Groups</div>
+    <p class="price">3 for $1</p>
+  </a>
 
-      <div class="product-card">
-        <img src="img/genshin_stickers.png" alt="Genshin Impact Stickers" class="sticker-image" />
-        <p class="caption">Genshin Impact character and scenery art</p>
-      </div>
+  <a href="stickers-anime.html" class="product-card">
+    <img src="img/haikyuu_stickers.png" alt="Anime Stickers" />
+    <div class="product-title">Anime</div>
+    <p class="price">3 for $1</p>
+  </a>
 
-      <div class="product-card">
-        <img src="img/haikyuu_stickers.png" alt="Haikyuu Stickers" class="sticker-image" />
-        <p class="caption">Haikyuu team and mascot designs</p>
-      </div>
-    </div>
+  <a href="stickers-cartoons.html" class="product-card">
+    <img src="img/cartoon1_stickers.webp" alt="Cartoon Stickers" />
+    <div class="product-title">Cartoons</div>
+    <p class="price">$1 each</p>
+  </a>
+</div>
+
 
     <div class="email-section">
-      <p>Want another anime/video game merch?<br>
+      <p>Want another type of design?<br>
       Send us an email: <strong>designsnjk@gmail.com</strong></p>
       <input type="text" id="requestInput" placeholder="Type your request here..." />
       <br>
@@ -213,12 +209,11 @@
     </div>
   </main>
 
-  <!-- Fixed Preorder Button -->
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
     Pre-Order Now
   </a>
 
-    <script>
+  <script>
     function sendEmail() {
       const request = document.getElementById('requestInput').value.trim();
       if (!request) {
