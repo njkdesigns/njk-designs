@@ -26,6 +26,13 @@
       color: #ffffff;
     }
 
+    .price-top {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffeb3b;
+      margin-top: 0.5rem;
+    }
+
     .back-link {
       position: fixed;
       top: 20px;
@@ -49,56 +56,80 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      color: #4a2a6b;
-      margin-bottom: 2rem;
-    }
-
-    .slider {
-      position: relative;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .slides {
-      display: none;
-      width: 100%;
+      background-color: white;
       border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .prev, .next {
+    /* Image Gallery */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
       cursor: pointer;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.1);
+      z-index: 2;
+    }
+
+    /* Popup Viewer */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .popup:target {
+      display: flex;
+    }
+
+    .popup-close {
       position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 12px;
-      margin-top: -22px;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      font-weight: bold;
       color: white;
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 0 3px 3px 0;
-      background-color: rgba(0,0,0,0.5);
-      user-select: none;
+      text-decoration: none;
+      background: rgba(0,0,0,0.5);
+      padding: 5px 12px;
+      border-radius: 50%;
     }
 
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
+    .popup-close:hover {
+      background: rgba(255,255,255,0.2);
     }
 
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-
-    .price {
-      text-align: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #a46ae5;
-      margin-top: 1rem;
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
     }
 
     .preorder-btn {
@@ -115,6 +146,7 @@
       cursor: pointer;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       z-index: 1000;
+      display: inline-block;
       animation: pulse 2s infinite;
     }
 
@@ -128,53 +160,103 @@
       50% { transform: scale(1.07); }
       100% { transform: scale(1); }
     }
+
+    .email-section {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .email-section input {
+      width: 80%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .email-section button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #a46ae5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .email-section button:hover {
+      background-color: #8c54c8;
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Crochet Hairclips</h1>
+    <div class="price-top">$4 each</div>
   </header>
 
-  <a class="back-link" href="crochet-plushies.html" aria-label="Back to Crochet Plushies">← Back</a>
+  <a class="back-link" href="crochet-accessories.html">← Back to Crochet Accessories</a>
 
   <main>
-    <h2>Our Crochet Hairclips Collection</h2>
-
-    <div class="slider">
-      <img class="slides" src="img/hairclip-placeholder1.png" alt="Crochet Hairclip Design 1">
-      <img class="slides" src="img/hairclip-placeholder2.png" alt="Crochet Hairclip Design 2">
-
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
+    <div class="image-gallery">
+      <a href="#img1"><img src="img/crochet_hairclip.png" alt="Crochet Hairclip Example" /></a>
+      <a href="#img2"><img src="img/placeholder1.jpg" alt="Placeholder Hairclip 1" /></a>
+      <a href="#img3"><img src="img/placeholder2.jpg" alt="Placeholder Hairclip 2" /></a>
     </div>
 
-    <p class="price">$3 each or 3 for $8</p>
+    <div class="description">
+      <p>These cute crochet hairclips are perfect for adding a touch of handmade charm to any outfit! Choose your favourite colours and styles.</p>
+    </div>
   </main>
+
+  <!-- Popup Images -->
+  <div id="img1" class="popup">
+    <a href="#" class="popup-close">&times;</a>
+    <img src="img/crochet_hairclip.png" alt="Crochet Hairclip Example Large" />
+  </div>
+
+  <div id="img2" class="popup">
+    <a href="#" class="popup-close">&times;</a>
+    <img src="img/placeholder1.jpg" alt="Placeholder Hairclip 1 Large" />
+  </div>
+
+  <div id="img3" class="popup">
+    <a href="#" class="popup-close">&times;</a>
+    <img src="img/placeholder2.jpg" alt="Placeholder Hairclip 2 Large" />
+  </div>
 
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
     Pre-Order Now
   </a>
 
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+  <div class="email-section">
+    <p>Want another type of design?<br>
+    Send us an email: <strong>designsnjk@gmail.com</strong></p>
+    <input type="text" id="requestInput" placeholder="Type your request here..." />
+    <br>
+    <button onclick="sendEmail()">Send Email</button>
+    <p style="font-size:0.9rem; color:#555; margin-top:10px;">
+      We will get back to you within 2 business days.
+    </p>
+  </div>
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
+<script>
+  function sendEmail() {
+    const request = document.getElementById('requestInput').value.trim();
+    if (!request) {
+      alert("Please enter your request before sending.");
+      return;
     }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("slides");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex-1].style.display = "block";
-    }
-  </script>
-
+    const subject = encodeURIComponent("Merch Request");
+    const body = encodeURIComponent(request);
+    const email = "designsnjk@gmail.com";
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
+  }
+</script>
 </body>
 </html>

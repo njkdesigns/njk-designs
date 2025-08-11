@@ -160,19 +160,50 @@
       50% { transform: scale(1.07); }
       100% { transform: scale(1); }
     }
+    .email-section {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.email-section input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.email-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #a46ae5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.email-section button:hover {
+  background-color: #8c54c8;
+}
+
   </style>
 </head>
 <body>
   <header>
     <h1>Crochet AirPods Pouch</h1>
-    <div class="price-top">$4 each</div>
+    <div class="price-top">$6 each</div>
   </header>
 
   <a class="back-link" href="crochet-plushies.html">← Back to Crochet Plushies</a>
 
   <main>
     <div class="image-gallery">
-      <a href="#img1"><img src="img/airpods_pouch1.png" alt="Crochet AirPods pouch front" /></a>
+      <a href="#img1"><img src="img/airpods_pouch.png" alt="Crochet AirPods pouch front" /></a>
       <a href="#img2"><img src="img/airpods_pouch2.png" alt="Crochet AirPods pouch back" /></a>
       <a href="#img3"><img src="img/airpods_pouch3.png" alt="Crochet AirPods pouch with keychain" /></a>
       <a href="#img4"><img src="img/airpods_pouch4.png" alt="Crochet AirPods pouch open" /></a>
@@ -219,5 +250,30 @@
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
     Pre-Order Now
   </a>
+  <div class="email-section">
+  <p>Want another type of design?<br>
+  Send us an email: <strong>designsnjk@gmail.com</strong></p>
+  <input type="text" id="requestInput" placeholder="Type your request here..." />
+  <br>
+  <button onclick="sendEmail()">Send Email</button>
+  <p style="font-size:0.9rem; color:#555; margin-top:10px;">
+    We will get back to you within 2 business days.
+  </p>
+</div>
+
+<script>
+  function sendEmail() {
+    const request = document.getElementById('requestInput').value.trim();
+    if (!request) {
+      alert("Please enter your request before sending.");
+      return;
+    }
+    const subject = encodeURIComponent("Merch Request");
+    const body = encodeURIComponent(request);
+    const email = "designsnjk@gmail.com";
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
+  }
+</script>
 </body>
 </html>
