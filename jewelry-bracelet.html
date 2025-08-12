@@ -191,6 +191,19 @@
     .email-section button:hover {
       background-color: #8c54c8;
     }
+
+    .coming-soon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 250px;
+      background-color: #eee;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #666;
+    }
   </style>
 </head>
 <body>
@@ -204,7 +217,7 @@
   <main>
     <div class="image-gallery">
       <a href="#img1"><img src="img/sample_bracelet1.png" alt="Bracelet sample1" /></a>
-      <a href="#img2"><img src="img/sample_earrings.png" alt="Bracelet sample2" /></a>
+      <div class="coming-soon">More coming soon...</div>
     </div>
 
     <div class="description">
@@ -217,11 +230,6 @@
   <div id="img1" class="popup">
     <a href="#" class="popup-close">&times;</a>
     <img src="img/sample_bracelet1.png" alt="Bracelet sample1" />
-  </div>
-
-  <div id="img2" class="popup">
-    <a href="#" class="popup-close">&times;</a>
-    <img src="img/sample_earrings.png" alt="Bracelet sample2" />
   </div>
 
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">

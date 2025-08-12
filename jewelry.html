@@ -192,7 +192,7 @@
     }
   </style>
 </head>
-<body>
+<>
   <header>
     <h1>Custom Jewelry</h1>
   </header>
@@ -211,25 +211,52 @@
         <div class="banner customisable">Customisable!</div>
         <img src="img/sample_bracelet1.png" alt="Custom Beaded Bracelet" />
         <div class="product-title">Custom Beaded Bracelet</div>
-        <p class="price">$5</p>
+        <p class="price">$4.50 each and 3 for $11</p>
       </a>
 
       <a href="jewelry-earrings.html" class="product-card">
         <div class="banner customisable">Customisable!</div>
         <img src="img/sample_earrings1.png" alt="Handmade Earrings" />
         <div class="product-title">Handmade Earrings</div>
-        <p class="price">$5</p>
+        <p class="price">$5 each and 3 for $12</p>
       </a>
 
       <a href="plushie-hair.html" class="product-card">
         <div class="banner semi-customisable">Customisable colours!</div>
         <img src="img/crochet_hairclip.png" alt="Crochet & Bead Hairclip" />
         <div class="product-title">Crochet & Bead Hairclip</div>
-        <p class="price">$4</p>
+        <p class="price">$3 each and 4 for $10</p>
       </a>
     </div>
 
-    <div class="email-section">
-      <p>Want another type of design?<br>
-      Send us an email: <strong>designsnjk@gmail.com</strong></p>
-      <input type="text" id="requestInput" placeholder="Type your request here..." />
+  <div class="email-section">
+    <p>Want another type of design?<br>
+    Send us an email: <strong>designsnjk@gmail.com</strong></p>
+    <input type="text" id="requestInput" placeholder="Type your request here..." />
+    <br>
+    <button onclick="sendEmail()">Send Email</button>
+    <p style="font-size:0.9rem; color:#555; margin-top:10px;">
+      We will get back to you within 2 business days.
+    </p>
+  </div>
+
+<script>
+  function sendEmail() {
+    const request = document.getElementById('requestInput').value.trim();
+    if (!request) {
+      alert("Please enter your request before sending.");
+      return;
+    }
+    const subject = encodeURIComponent("Merch Request");
+    const body = encodeURIComponent(request);
+    const email = "designsnjk@gmail.com";
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
+  }
+</script>
+  </main>
+  <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
+    Pre-Order Now
+  </a>
+</body>
+</html>

@@ -84,6 +84,20 @@
       z-index: 2;
     }
 
+    /* Coming Soon Card */
+    .coming-soon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 250px;
+      background-color: #eee;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #666;
+    }
+
     /* Popup Viewer */
     .popup {
       display: none;
@@ -196,20 +210,19 @@
 <body>
   <header>
     <h1>Crochet Hairclips</h1>
-    <div class="price-top">$4 each</div>
+    <div class="price-top">$3 each and 4 for $10</div>
   </header>
 
-  <a class="back-link" href="crochet-plushies.html">← Back to Crochet</a>
+  <a class="back-link" href="jewelry.html">← Back to Jewelry</a>
 
   <main>
     <div class="image-gallery">
       <a href="#img1"><img src="img/crochet_hairclip.png" alt="Crochet Hairclip Example" /></a>
-      <a href="#img2"><img src="img/placeholder1.jpg" alt="crochet hairclip sample2" /></a>
-      <a href="#img3"><img src="img/placeholder2.jpg" alt="Bead hairclip sample3" /></a>
+      <div class="coming-soon">More coming soon...</div>
     </div>
 
     <div class="description">
-      <p>These cute crochet hairclipsand bead are perfect for adding a touch of handmade charm to any outfit! Choose your favourite colours and styles.</p>
+      <p>These cute crochet hairclips and bead designs are perfect for adding a touch of handmade charm to any outfit! Choose your favourite colours and styles.</p>
     </div>
   </main>
 
@@ -217,16 +230,6 @@
   <div id="img1" class="popup">
     <a href="#" class="popup-close">&times;</a>
     <img src="img/crochet_hairclip.png" alt="Crochet Hairclip Example Large" />
-  </div>
-
-  <div id="img2" class="popup">
-    <a href="#" class="popup-close">&times;</a>
-    <img src="img/placeholder1.jpg" alt="Hairclip 2 Large" />
-  </div>
-
-  <div id="img3" class="popup">
-    <a href="#" class="popup-close">&times;</a>
-    <img src="img/placeholder2.jpg" alt="Hairclip 3 Large" />
   </div>
 
   <a href="https://forms.gle/Fr1TiDmtvkJpFaXB6" target="_blank" class="preorder-btn">
